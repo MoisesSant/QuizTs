@@ -7,8 +7,8 @@ import { QuestionCard } from "./components/QuestionCard";
 function App() {
   const [question, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [isFinished, setIsFinished] = useState(false);
+  //  const [score, setScore] = useState(0);
+  //  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     setQuestions(quizData);
