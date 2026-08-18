@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "question": "Qual é a capital da França?",
+    "options": ["Paris", "Londres", "Berlim", "Madri"],
+    "answer": "Paris"
+  },
+  {
+    "id": 2,
+    "question": "Qual planeta é conhecido como 'Estrela D'Alva'?",
+    "options": ["Marte", "Vênus", "Júpiter", "Saturno"],
+    "answer": "Vênus"
+  },
+  {
+    "id": 3,
+    "question": "Quem escreveu 'Dom Casmurro'?",
+    "options": [
+      "Machado de Assis",
+      "José de Alencar",
+      "Carlos Drummond de Andrade",
+      "Clarice Lispector"
+    ],
+    "answer": "Machado de Assis"
+  },
+  {
+    "id": 4,
+    "question": "Qual é o maior oceano do mundo?",
+    "options": ["Atlântico", "Índico", "Pacífico", "Ártico"],
+    "answer": "Pacífico"
+  },
+  {
+    "id": 5,
+    "question": "Em que ano o homem pisou na Lua pela primeira vez?",
+    "options": ["1965", "1969", "1971", "1975"],
+    "answer": "1969"
+  },
+  {
+    "id": 6,
+    "question": "Qual desses é um elemento químico?",
+    "options": ["Água", "Sal", "Oxigênio", "Açúcar"],
+    "answer": "Oxigênio"
+  },
+  {
+    "id": 7,
+    "question": "Quantos ossos tem o corpo humano adulto, em média?",
+    "options": ["206", "210", "195", "220"],
+    "answer": "206"
+  },
+  {
+    "id": 8,
+    "question": "Qual é a moeda oficial do Japão?",
+    "options": ["Yuan", "Won", "Iene", "Ringgit"],
+    "answer": "Iene"
+  },
+  {
+    "id": 9,
+    "question": "Qual desses animais é um mamífero marinho?",
+    "options": ["Tubarão", "Baleia", "Polvo", "Estrela-do-mar"],
+    "answer": "Baleia"
+  },
+  {
+    "id": 10,
+    "question": "Quem pintou o teto da Capela Sistina?",
+    "options": ["Leonardo da Vinci", "Rafael", "Michelangelo", "Donatello"],
+    "answer": "Michelangelo"
+  },
+  {
+    "id": 11,
+    "question": "Qual é o maior país do mundo em área territorial?",
+    "options": ["China", "Estados Unidos", "Rússia", "Canadá"],
+    "answer": "Rússia"
+  }
+]
