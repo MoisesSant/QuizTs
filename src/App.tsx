@@ -4,17 +4,38 @@ import type { Question } from "./type";
 import quizData from "./data/quiz.json";
 import { ProgressBar } from "./components/ProgressBar";
 import { QuestionCard } from "./components/QuestionCard";
+import { number } from "motion";
+import { ResultScreen } from "./components/ResultScreen";
 function App() {
   const [question, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  //  const [score, setScore] = useState(0);
-  //  const [isFinished, setIsFinished] = useState(false);
+  const [score, setScore] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     setQuestions(quizData);
   }, []);
 
-  const handleAnswer = (isCorrent: boolean) => {};
+  const handleAnswer = (isCorrent: boolean) => {
+    if (isCorrent) {
+      setScore((prev: number) => prev + 1); // Adiciona +1 no score
+    }
+    if (
+      currentQuestionIndex <
+      question.length - 1
+    ) // caso tenha uma proxima questão
+    {
+      setCurrentQuestionIndex((prev) => prev + 1); // passa para a proxima página
+    } else {
+      setIsFinished(true);
+    }
+  };
+
+  const restartQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setIsFinished(false);
+  };
 
   if (question.length === 0) {
     return (
@@ -42,14 +63,24 @@ function App() {
 
         {/* Main Content */}
         <main>
-          <ProgressBar
-            current={currentQuestionIndex + 1}
-            total={question.length}
-          />
-          <QuestionCard
-            question={question[currentQuestionIndex]}
-            onAnswer={handleAnswer}
-          />
+          {!isFinished ? (
+            <div className="w-full max-w-2xl mx-auto">
+              <ProgressBar
+                current={currentQuestionIndex + 1}
+                total={question.length}
+              />
+              <QuestionCard
+                question={question[currentQuestionIndex]}
+                onAnswer={handleAnswer}
+              />
+            </div>
+          ) : (
+            <ResultScreen
+              score={score}
+              total={question.length}
+              onRestart={restartQuiz}
+            />
+          )}
         </main>
       </div>
     </div>
